@@ -1,0 +1,17 @@
+<h2><%= @username.capitalize %>'s details</h2>
+<ul class="user_info">
+  <li><strong>Email:</strong> <%= @user_list[@username][:email] %></li>
+  <li><strong>Interests:</strong> <%= @user_list[@username][:interests].join(', ') %></li>
+</ul>
+
+<h4>Other users in the database</h4>
+<ul>
+  <% @user_list.each do |name, _| %>
+    <% next if name == @username %>
+      <li>
+        <a href="<%= name %>"><%= name.capitalize %></a>
+      </li>
+  <% end %>
+</ul>
+
+<p><a href="/">Back to homepage</a></p>

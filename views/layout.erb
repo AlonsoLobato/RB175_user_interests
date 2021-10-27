@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= @page_title %></title>
+    <meta charset="utf-8" />
+    <style>
+      .user_info {
+        list-style-type: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <%= yield %>
+    <p><em>There are <%= @total_users %> users with a total of <%= @total_interests %> interests in the database.</em></p>
+  </body>
+</html>

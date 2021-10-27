@@ -1,0 +1,8 @@
+<h2>List of users in database of people's interests</h2>
+<ul>
+  <% @user_list.each do |name, _| %>
+    <li>
+      <a href="userlist/<%= name %>"><%= name.capitalize %></a>
+    </li>
+  <% end %>
+</ul>
