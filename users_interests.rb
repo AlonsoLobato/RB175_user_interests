@@ -11,9 +11,9 @@ before do
 end
 
 helpers do
-  def count_interests(hash)
+  def count_interests(users)
     counter = 0
-    hash.each_key { |key| counter += hash[key][:interests].count }
+    users.each_key { |user| counter += users[user][:interests].count }
     counter
   end
 end
